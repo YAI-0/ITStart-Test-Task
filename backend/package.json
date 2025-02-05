@@ -1,0 +1,16 @@
+{
+	"name": "backend",
+	"version": "1.0.0",
+	"author": {
+		"name": "Kirill",
+		"email": "echo.webx@gmail.com"
+	},
+	"private": true,
+	"license": "AGPL-3.0",
+	"scripts": {
+		"dev": "json-server --watch db.json --port 4000"
+	},
+	"devDependencies": {
+		"json-server": "^1.0.0-beta.3"
+	}
+}

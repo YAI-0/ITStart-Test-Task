@@ -1,0 +1,135 @@
+.overlay {
+	z-index: 15;
+	user-select: none;
+	display: flex;
+	position: absolute;
+	align-items: center;
+	justify-content: center;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.5);
+
+	> .content {
+		display: flex;
+		position: relative;
+		max-height: 100svh;
+		max-width: 700px;
+		padding: 1rem;
+		width: 100%;
+
+		> .form {
+			display: flex;
+			position: relative;
+			overflow: hidden;
+			border-radius: 7px;
+			background-color: #1c1c1c;
+			border: 2px solid rgb(109, 109, 109);
+			width: 100%;
+
+			&.delete {
+				border-color: rgb(123, 62, 62);
+				> .scroll {
+					> .top {
+						padding: 0.2rem;
+						border-radius: 0.25rem;
+						border: 2px solid rgb(123, 62, 62);
+					}
+					button {
+						&.right {
+							background-color: rgb(173, 75, 75);
+
+							&:hover {
+								background-color: rgb(193, 77, 77);
+							}
+							&:active {
+								background-color: rgb(158, 61, 61);
+							}
+						}
+					}
+				}
+			}
+
+			> .scroll {
+				display: flex;
+				flex-direction: column;
+				overflow-y: auto;
+				padding: 1rem;
+				height: 100%;
+				width: 100%;
+
+				> .top {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					gap: 1rem;
+					margin-bottom: 1rem;
+				}
+
+				.flex {
+					display: flex;
+					gap: 1rem;
+				}
+
+				button {
+					&.left {
+						padding: 0.6rem 1rem;
+						height: 100%;
+						width: 55%;
+						background-color: rgb(106, 173, 75);
+						border: none;
+						border-radius: 0.25rem;
+						font-weight: 600;
+
+						&:hover {
+							background-color: rgb(114, 193, 77);
+						}
+						&:active {
+							background-color: rgb(100, 158, 61);
+						}
+					}
+					&.right {
+						padding: 0.6rem 1rem;
+						height: 100%;
+						width: 45%;
+						background-color: rgb(75, 173, 140);
+						border: none;
+						border-radius: 0.25rem;
+						font-weight: 600;
+
+						&:hover {
+							background-color: rgb(77, 193, 154);
+						}
+						&:active {
+							background-color: rgb(61, 158, 126);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.fadeIn {
+	animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+.fadeOut {
+	animation: fadeOut 0.2s ease forwards;
+}

@@ -1,0 +1,78 @@
+:root {
+	--background: #ffffff;
+	--foreground: #171717;
+}
+
+*,
+::before,
+::after {
+	box-sizing: border-box;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	transition: 100ms ease-in-out;
+	scrollbar-width: thin;
+
+	img {
+		display: block;
+		object-fit: cover;
+		pointer-events: none;
+	}
+
+	button,
+	label {
+		cursor: pointer;
+	}
+
+	input,
+	textarea {
+		outline: none;
+		user-select: none;
+	}
+
+	a {
+		text-decoration: none;
+		color: currentColor;
+	}
+}
+
+body {
+	height: 100svh;
+	overflow-y: scroll;
+
+	color: var(--foreground);
+	background: var(--background);
+	font-family: Arial, Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--background: #0a0a0a;
+		--foreground: #ededed;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	html {
+		color-scheme: dark;
+	}
+}
+
+/**
+  Удаляем все анимации и переходы для людей,
+  которые предпочитают их не использовать
+ */
+@media (prefers-reduced-motion: reduce) {
+	*,
+	::before,
+	::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}

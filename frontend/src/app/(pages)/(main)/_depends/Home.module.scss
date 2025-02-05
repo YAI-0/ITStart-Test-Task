@@ -1,0 +1,39 @@
+.header {
+	display: flex;
+	gap: 2rem;
+	justify-content: space-between;
+	padding: 2rem 3rem;
+	width: 100%;
+
+	> .flex {
+		user-select: none;
+		display: flex;
+		gap: 1rem;
+		align-items: center;
+		justify-content: center;
+
+		> p {
+			font-weight: bold;
+		}
+		> button {
+			padding: 0 1rem;
+			height: 100%;
+			width: 7rem;
+			background-color: rgb(75, 173, 140);
+			border: none;
+			border-radius: 0.25rem;
+			font-weight: 600;
+
+			&:hover {
+				background-color: rgb(77, 193, 154);
+			}
+			&:active {
+				background-color: rgb(61, 158, 126);
+			}
+		}
+	}
+}
+
+.main {
+	overflow: hidden;
+}
